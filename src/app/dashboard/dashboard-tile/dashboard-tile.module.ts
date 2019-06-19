@@ -16,13 +16,20 @@ import { DashboardTileComponent } from './dashboard-tile.component';
     DashboardTileComponent
   ],
   entryComponents: [
-    // TODO: Add component
+    DashboardTileComponent
   ]
 })
 export class DashboardTileModule {
-
   constructor(private injector: Injector) {
-    // TODO: Wrap and register component
+    this.exportToCustomElements(injector);
+  }
+
+  /**
+   * Create a custom element from Angular element and the define it as a browser custom element.
+   */
+  exportToCustomElements(injector: Injector) {
+    const custElemFromAngElem = createCustomElement(DashboardTileComponent, { injector });
+    customElements.define('dashboard-tile', custElemFromAngElem);
   }
 
 }
