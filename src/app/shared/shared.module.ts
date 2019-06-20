@@ -1,6 +1,5 @@
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NgModule} from '@angular/core';
-import {ModuleWithProviders} from '@angular/core/src/metadata/ng_module';
 import {CityPipe} from './pipes/city.pipe';
 
 @NgModule({
