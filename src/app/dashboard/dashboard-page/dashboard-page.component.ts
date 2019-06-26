@@ -26,8 +26,13 @@ export class DashboardPageComponent {
       Math.round(Math.random() * 100)
     ];
 
-    // TODO: Add custom element to page
-
+    const element = document.createElement(tileKind);
+    element['a'] = data[0];
+    element['b'] = data[1];
+    element['c'] = data[2];
+    element.setAttribute('class', 'col-lg-4');
+    document.getElementById('content').appendChild(element);
+    
   }
 
   addLazy(): void {
