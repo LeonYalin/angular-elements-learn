@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import addingCustomElements from './learn/addingCustomElements';
+import loadingExternalCustomElements from './learn/addingExternalCustomElements';
 
 @Component({
   selector: 'flight-app',
@@ -12,6 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     addingCustomElements();
+    loadingExternalCustomElements();
   }
 }
 

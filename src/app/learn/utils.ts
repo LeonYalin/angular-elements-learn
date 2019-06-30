@@ -3,7 +3,7 @@ function delimeterMsg(str) {
 }
 
 function log(...args: any[]) {
-  console.log(...['\n', ...args]);
+  console.log(...['\n', ...args.map(arg => arg + '\n\n')]);
 }
 
 export { log, delimeterMsg };
